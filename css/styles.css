@@ -218,7 +218,7 @@ header {
     display: inline-flex;
     justify-content: center;
     align-self: center;
-    margin: 2rem 0 0 12px;
+    margin: 2rem 0 12px 0;
     text-decoration: underline;
     font-size: 20px;
     text-transform: uppercase;
@@ -230,7 +230,8 @@ header {
     height: 532px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
+    /* align-items: center; */
     margin: auto;
     flex-direction: row;
     
@@ -372,4 +373,18 @@ header {
         font-size: 3rem;
     }
 }
+
+@media only screen and (max-width: 800px) {
+    .container-card .card {
+       width: 300px;
+       height: 450px;
+    }
+ 
+    .container-card .card img {
+       width: 300px;
+       height: auto;
+    }
+ }
+
+
 
