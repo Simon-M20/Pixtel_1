@@ -72,7 +72,7 @@ body {
     justify-content: center;
     align-items: center;
     margin: auto;
-    background-color: #0c4160;
+    background-color: #f2f2f2;
     opacity: .8;
     width: 100%;
     height: 100vh;
@@ -176,7 +176,11 @@ header {
 }
 
 .nav-bar ul li {
-    padding: 2rem 4px 8px 16px;
+    padding: 3rem 0 0 0;
+}
+
+.nav-bar ul li:last-child {
+    padding-left: 3rem;
 }
 
 .nav-bar li {
@@ -190,7 +194,7 @@ header {
     bottom: 0;
     width: 100%;
     height: 2px;
-    background: #fff;
+    background: #222;
     transform: translateX(-100%);
     transition: all 0.4s;
 }
@@ -202,7 +206,7 @@ header {
 
 .nav-bar ul li a {
     text-decoration: none;
-    color: #fff;
+    color: #222;
     font-size: 21px;
 }
 
@@ -211,18 +215,27 @@ header {
     font-weight: bold;
 }
 
-.text {
-    position: absolute;
+.fondo div .text {
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 21rem 2rem;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.text {
     text-align: center;
     color: #fff;
     font-weight: bold;
     font-size: 2.2em;
     letter-spacing: 2px;
     text-transform: uppercase;
+    /* line-height: 46px; */
 }
 
 .main-content {
@@ -251,12 +264,13 @@ header {
     /* align-items: center; */
     margin: auto;
     flex-direction: row;
+    position: relative;
     
 }
 
 .container-card .card{
     width: 300px;
-    height: 450px;
+    height: 550px;
     border-radius: 8px;
     box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
     overflow: hidden;
@@ -264,6 +278,7 @@ header {
     text-align: center;
     transition: all 0.25s;
     background-color: #f7f7f7;
+    position: relative;
 }
 
 .container-card .card:hover{
@@ -273,36 +288,97 @@ header {
     /* -webkit-tap-highlight-color: rgba(0,0,0,0); */
 }
 
-.card {
+.container-card .card .imgBx, .container-card .card .content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.container-card .card .imgBx img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.container-card .card .content::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #f7f7f7;
+    transform: scaleX(0);
+    transition: all 0.5s ease-in-out;
+    transform-origin: left;
+    transition-delay: 0.5s;
+}
+
+.container-card .card:hover .content::before {
+    transform: scaleX(1);
+    transition: all 0.5s ease-in-out;
+    transform-origin: left;
+    transition-delay: 0s;
+}
+
+.container-card .card .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container-card .card .content .contentBx {
+    position: relative;
+    z-index: 1;
+    transition: 0.5s;
+    transform: translateX(-500px);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-content: center;
+    height: 100%;
+    transition-delay: 0s;
+    
 }
 
-.container-card .card h4{
+.container-card .card:hover .content .contentBx {
+    transform: translateX(0px);
+    transition-delay: 0.5s;
+}
+
+.container-card .card .content .contentBx h4 {
     font-weight: 600;
     background-color: #0c4160;
     padding: 2.5rem 10px;
     text-align: center;
     font-size: 2rem;
-    color: #ff914d;
-}
-  
-.container-card .card p{
-     padding: 0 1rem;
-     font-size: 16px;
-     font-weight: 300;
-}
-  
-.container-card .card a{
-     font-weight: 500;
-     text-decoration: none;
-     color: #0c4160;
-     padding: 1rem 0;
+    color: #fff;
 }
 
-.container-card .card a:hover {
+.container-card .card .content .contentBx h4:hover {
+    color: #ff914d;
+}
+
+.container-card .card .content .contentBx p {
+    padding: 0 1rem;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.container-card .card .content .contentBx a {
+    font-weight: 500;
+    text-decoration: none;
+    color: #0c4160;
+    padding: 1rem 0;
+}
+
+.container-card .card .content .contentBx a:hover {
     background-color: #ff914d;
     color: #fff;
     font-weight: bold;
@@ -316,7 +392,7 @@ header {
     outline: none;
     padding: 6px;
     bottom: 3vh;
-    right: 1.5vw;
+    right: 2.5vw;
     /* top: 45.5vw; */
     width: 2.5rem;
     height: 2.4rem;
@@ -362,7 +438,7 @@ header {
     text-align: center;
     background-color: #07112C;
     color: #f2f2f2;
-    padding: 0 2rem;
+    padding: 0 .8rem;
 }
 
 .slogan-phrase {
@@ -379,6 +455,71 @@ header {
     padding: 0.5rem 0;
     font-size: .8rem;
 }
+
+.loader-outer {
+    min-height: 100vh;
+    width: 100%;
+    background-color: #222;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.loader > span {
+    width: 15px;
+    height: 15px;
+    display: block;
+    background-color: #fff;
+    border-radius: 50%;
+    position: relative;
+    margin: 0 5px;
+}
+
+.loader {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dot-1 {
+    animation: load 1s cubic-bezier(0.4, 0.0, 0.2, 1 ) 0s infinite;
+}
+
+.dot-2 {
+    animation: load 1s cubic-bezier(0.4, 0.0, 0.2, 1 ) 0.25s infinite;
+}
+
+.dot-3 {
+    animation: load 1s cubic-bezier(0.4, 0.0, 0.2, 1 ) 0.50s infinite;
+}
+
+.dot-4 {
+    animation: load 1s cubic-bezier(0.4, 0.0, 0.2, 1 ) 0.75s infinite;
+}
+
+.dot-5 {
+    animation: load 1s cubic-bezier(0.4, 0.0, 0.2, 1 ) 1s infinite;
+}
+
+@keyframes load {
+    0% {
+      top: 0;
+    }
+  
+    50% {
+      top: 15px;
+    }
+  
+    100% {
+      top: 0;
+    }
+  }
 
 
 @media screen and (min-width: 1024px) {
@@ -411,10 +552,6 @@ header {
         height: 3.3rem;
         border-radius: 50%;
     }
-
-    /* .nav-bar {
-        width: 90%;
-    } */
 
     .nav-bar-responsive {
         display: flex;
@@ -473,8 +610,7 @@ header {
     }
 
     .text {
-        margin: 20rem 22rem;
-        font-size: 3rem;
+        font-size: 4rem;
     }
 
     .container-card .card {
@@ -495,12 +631,6 @@ header {
     }
 }
 
-/* @media only screen and (max-width: 800px) {
-    .container-card .card {
-       width: 300px;
-       height: 450px;
-    }
- } */
 
 
 

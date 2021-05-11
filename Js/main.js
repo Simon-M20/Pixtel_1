@@ -9,3 +9,10 @@ document.addEventListener("DOMContentLoaded", e => {
     hamburgerBtn(".panel-btn", ".panel", ".nav-bar a")
     scrollTopBtn(".scroll-top")
 })
+
+window.onload = function() {
+    let loader = document.getElementById("loader")
+
+    loader.style.visibility = "hidden";
+    loader.style.opacity = "0"
+}
