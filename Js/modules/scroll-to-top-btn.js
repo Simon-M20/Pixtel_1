@@ -12,7 +12,7 @@ export default function scrollTopBtn (btn) {
     })
 
     document.addEventListener("click", e => {
-        if (e.target.matches(btn)) {
+        if (e.target.matches(btn) || e.target.matches(`${btn} *`)) {
         window.scroll({
             behavior: "smooth",
             top: 0
