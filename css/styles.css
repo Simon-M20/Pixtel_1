@@ -115,7 +115,7 @@ header {
     align-items: center;
     text-align: center;
     border-bottom: 4px solid lightskyblue;
-    position: fixed;
+    position: sticky;
     background-color: #0c4160;
     top: 0;
     left: 0;
@@ -218,17 +218,19 @@ header {
     font-weight: bold;
 }
 
-.fondo div .text {
+.fondo div {
     height: 100vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: auto;
     position: absolute;
+    margin: auto;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
+    /* line-height: 50px; */
 }
 
 .text {
@@ -239,11 +241,14 @@ header {
     letter-spacing: 2px;
     text-transform: uppercase;
     /* line-height: 46px; */
+    padding: 0 16px;
 }
 
 .main-content {
     height: 100vh;
     padding: 64px 0;
+    width: 100%;
+    display: block;
 }
 
 .subtitle {
@@ -251,7 +256,7 @@ header {
     display: inline-flex;
     justify-content: center;
     align-self: center;
-    margin: 2rem 0 8px 0;
+    margin: 0 0 8px 0;
     font-size: 25px;
     text-transform: uppercase;
     
@@ -259,25 +264,26 @@ header {
 
 .container {
     width: 100%;
-    max-width: 1200px;
-    height: 532px;
+    /* max-width: 1200px; */
+    height: auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     /* align-items: center; */
-    margin: auto;
+    /* margin: auto; */
     flex-direction: row;
     position: relative;
+    padding: 4px;
     
 }
 
 .container-card .card{
     width: 300px;
-    height: 550px;
+    height: 532px;
     border-radius: 8px;
     box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
     overflow: hidden;
-    margin: 20px;
+    margin: 20px 10px;
     text-align: center;
     transition: all 0.25s;
     background-color: #f7f7f7;
@@ -388,6 +394,74 @@ header {
     text-transform: uppercase;
 }
 
+/**/
+.slider {
+    position: relative;
+    width: 100%;
+    /* margin: 3rem auto; */
+    text-align: center;
+}
+
+.slider-slides {
+    position: absolute;
+    height: 532px;
+}
+
+.slider-slide {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    z-index: 20;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 1s ease;
+}
+
+.slider-slide.active {
+    /* position: absolute; */
+    visibility: visible;
+    opacity: 1;
+}
+
+.slider-btns {
+    position: absolute;
+    width: 100%;
+    top: 16rem;
+    display: flex;
+    justify-content: space-between;
+    z-index: 21;
+    font-size: 2rem;
+    font-weight: bold;
+    align-items: center;
+    text-align: center;
+}
+
+.slider .arrow {
+    /* padding: 0 28px; */
+    display: block;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    border: thin solid #222;
+    text-decoration: none;
+    background-color: #222;
+    color: #f7df1e;
+    transition: all .3 ease;
+}
+
+.slider a:hover {
+    color: #4d4d4d;
+}
+
+
+
+
+
+/**/
+
+
 .scroll-top {
     position: fixed;
     z-index: 996;
@@ -459,6 +533,66 @@ header {
     font-size: .8rem;
 }
 
+.slogan-2 {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    height: 220px;
+    /* flex-direction: row; */
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    background-color: royalblue;
+    font-size: 1.5rem;
+}
+
+.call {
+    position: relative;
+    /* height: 230px; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 24px 12px;
+    text-align: center;
+    /* text-transform: uppercase; */
+    color: #fff;
+    
+}
+
+.call p {
+    width: 100%;
+    padding: 0 18px;
+    margin: 10px 0;
+    
+}
+
+.call p span {
+    text-transform: uppercase;
+}
+
+.call button {
+    width: 50%;
+    margin: 10px auto;
+    /* justify-self: center; */
+    padding: 0.5rem 18px;
+    /* margin-left: 18px; */
+    text-transform: uppercase;
+    background-color: transparent;
+    border: 2px solid #fff;
+    border-radius: 20px;
+    color: #fff;
+}
+
+.call button:hover {
+    background-color: #f2f2f2;
+    color: #222;
+    font-weight: bold;
+    cursor: pointer;
+    /* font-size: 18px; */
+}
+
+/* Loader css */
 .loader-outer {
     min-height: 100vh;
     width: 100%;
@@ -523,9 +657,9 @@ header {
     100% {
       top: 0;
     }
-  }
+}
 
-
+/* Responsive Design */
 @media screen and (min-width: 1024px) {
     .panel {
         position: sticky;
@@ -632,6 +766,18 @@ header {
 
     .slogan-phrase-2 {
         font-size: 1rem;
+    }
+
+    .slogan-2 {
+        height: 180px;
+    }
+
+    .call p {
+        width: 75%;
+    }
+
+    .call button {
+        width: 25%;
     }
 }
 
