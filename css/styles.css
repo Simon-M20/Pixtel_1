@@ -254,12 +254,13 @@ header {
 
 .subtitle {
     width: 100%;
-    display: inline-flex;
+    display: flex;
     justify-content: center;
     align-self: center;
     margin: 0 0 8px 0;
     font-size: 25px;
     text-transform: uppercase;
+    padding: 10px;
     
 }
 
@@ -313,6 +314,31 @@ header {
     width: 100%;
     height: 100%;
     object-fit: contain;
+}
+
+.container-card .card .imgBx .ver {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    outline: none;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 25px auto;
+    background-color: transparent;
+    border: 2px solid #000;
+    border-radius: 20px;
+    padding: 5px 24px;
+    transition: all .5s ease-in;
+}
+
+.container-card .card .imgBx .ver span {
+    padding-left: 14px;
+} 
+
+.container-card .card .imgBx .ver:hover {
+    background-color: #222;
 }
 
 .container-card .card .content::before {
@@ -533,7 +559,7 @@ header {
     position: relative;
     display: flex;
     flex-wrap: wrap;
-    height: 220px;
+    height: 282px;
     /* flex-direction: row; */
     width: 100%;
     justify-content: center;
@@ -612,15 +638,10 @@ header {
 }
 
 .bg-black {
-    /* margin-top: 12px; */
-    /* background-color: #ff5a00; */
     background: linear-gradient(to bottom, #000 0%, #000 50%, white 50%, white 100%);
     width: 100%;
     height: auto;
     padding: 54px 0;
-    /* border-left: 100px solid #fff;
-    border-top: 50px solid transparent;
-    border-bottom: 50px solid transparent; */
 }
 
 .bg-black h3 {
@@ -629,6 +650,7 @@ header {
     text-align: center;
     padding: 8px;
     color: #fff;
+    margin-top: 15px;
 }
 
 .bg-black .figure-2 {
@@ -639,11 +661,7 @@ header {
     font-size: 16px;
     text-align: justify;
     padding: 14px;
-}
-
-.bg-black .figure-2 img {
-    width: 350px;
-    height: auto;
+    line-height: 1.625;
 }
 
 .bg-black .figure-2 img, .bg-black .figure-2 figcaption {
@@ -879,9 +897,15 @@ header {
         padding-right: 12px;
     }
 
+    
+
     .bg-black .figure-2 img, .bg-black .figure-2 figcaption {
         width: 50%;
         padding: 12px;
+    }
+    
+    .bg-black .figure-2 img {
+        padding: 32px;
     }
 }
 
