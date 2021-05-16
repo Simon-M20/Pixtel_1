@@ -114,9 +114,9 @@ header {
     justify-content: space-between;
     align-items: center;
     text-align: center;
-    border-bottom: 4px solid lightskyblue;
+    border-bottom: 4px solid #fff;
     position: sticky;
-    background-color: #0c4160;
+    background-color: #07112C;
     top: 0;
     left: 0;
     bottom: 0;
@@ -134,8 +134,8 @@ header {
 .logo_img {
     width: auto;
     height: 3.3rem;
-    border-radius: 50%;
-    padding: 0 12px;
+    border-radius: 15px;
+    padding: 2px 12px;
     margin: 0;
 }
 
@@ -261,6 +261,7 @@ header {
     font-size: 25px;
     text-transform: uppercase;
     padding: 10px;
+    text-align: center;
     
 }
 
@@ -423,66 +424,99 @@ header {
 }
 
 /*Responsive Slider*/
-.slider {
+.slideshow-container {
+    max-width: 1000px;
     position: relative;
-    width: 100%;
-    /* margin: 3rem auto; */
-    text-align: center;
+    margin: auto;
 }
 
-.slider-slides {
-    position: absolute;
-    height: 532px;
-}
-
-.slider-slide {
-    height: 100%;
-    width: 100%;
-    position: relative;
-    z-index: 20;
-    top: 0;
-    left: 0;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 1s ease;
-}
-
-.slider-slide.active {
-    /* position: absolute; */
-    visibility: visible;
-    opacity: 1;
+.mySlides {
+    display: none;
 }
 
 .slider-btns {
     position: absolute;
     width: 100%;
-    top: 16rem;
+    top: 50%;
     display: flex;
     justify-content: space-between;
-    z-index: 21;
-    font-size: 2rem;
-    font-weight: bold;
+    /* z-index: 21; */
+    /* font-size: 2rem; */
+    /* font-weight: bold; */
     align-items: center;
     text-align: center;
+    /* overflow: hidden; */
 }
 
-.slider .arrow {
-    /* padding: 0 28px; */
-    display: block;
-    width: 3rem;
-    height: 3rem;
-    border-radius: 50%;
-    border: thin solid #222;
+.slider-btns .arrow {
+    outline: none;
+    border: none;
+    background-color: transparent;
+    /* border: 2px solid #000; */
+    border-radius: 20px;
+    /* padding: 5px 24px; */
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: #000;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
     text-decoration: none;
-    background-color: #222;
-    color: #f7df1e;
-    transition: all .3 ease;
 }
 
-.slider a:hover {
-    color: #4d4d4d;
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+    border-radius: 15px;
+    color: #fff;
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+    background-color: #717171;
+}
+
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+  
+@-webkit-keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+  
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
 }
 /**/
+
 /*Scroll-top btn*/
 .scroll-top {
     position: fixed;
@@ -526,6 +560,7 @@ header {
     visibility: hidden;
 }
 /* */
+
 .slogan {
     height: 282px;
     width: 100%;
@@ -638,14 +673,40 @@ header {
 }
 
 .bg-black {
-    background: linear-gradient(to bottom, #000 0%, #000 50%, white 50%, white 100%);
     width: 100%;
-    height: auto;
+    height: 100vh;
     padding: 54px 0;
+    position: relative;
+    background-repeat: no-repeat;
+}
+
+.bg-black::before {
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.65);
+    content: "";
+    background-repeat: no-repeat;
+}
+
+.bg-black div {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    margin: auto;
+    width: 100%;
+    /* z-index: 10; */
 }
 
 .bg-black h3 {
-    font-size: 22px;
+    /* position: absolute; */
+    font-size: 24px;
     text-transform: uppercase;
     text-align: center;
     padding: 8px;
@@ -653,29 +714,74 @@ header {
     margin-top: 15px;
 }
 
-.bg-black .figure-2 {
+.section-2 .bg-black .figure-2 {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     flex-wrap: wrap;
     align-items: center;
     font-size: 16px;
     text-align: justify;
     padding: 14px;
     line-height: 1.625;
+    position: absolute;
+    color: #fff;
+    position: absolute;
+    margin: auto;
+    top: 20%;
 }
 
 .bg-black .figure-2 img, .bg-black .figure-2 figcaption {
     width: 100%;
     padding: 14px;
-}
-
-.section-2 .bg-blue {
-    width: 100%;
-    height: auto;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.bg-blue {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    padding: 54px 0;
+    position: relative;
+    background-repeat: no-repeat;
+}
+
+.bg-blue::before {
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.65);
+    content: "";
+    background-repeat: no-repeat;
+}
+
+.section-2 .bg-blue .reason {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    text-align: center;
+}
+
+.section-2 .bg-blue .reason .figure-improve, .section-2 .bg-blue .reason .figure-store, .section-2 .bg-blue .reason .figure-reunion {
+    width: 100%;
+    padding: 12px;
+}
+
+.section-2 .bg-blue .reason .figure-improve img, .section-2 .bg-blue .reason .figure-store img, .section-2 .bg-blue .reason .figure-reunion img {
+    width: 350px;
+    height: auto;
+    padding: 12px;
 }
 
 
@@ -883,29 +989,72 @@ header {
         width: 30%;
     }
 
-    .bg-black {
-        background: linear-gradient(to right, #000 0%, #000 50%, white 50%, white 100%);
-        
-    }
-
     .bg-black h3 {
-        color: #000;
-    }
-
-    .bg-black h3 span {
         color: #fff;
-        padding-right: 12px;
+        font-size: 2rem;
     }
-
-    
 
     .bg-black .figure-2 img, .bg-black .figure-2 figcaption {
         width: 50%;
         padding: 12px;
     }
+
+    .bg-black .figure-2 figcaption{
+        font-size: 1.1rem;
+    }
     
     .bg-black .figure-2 img {
         padding: 32px;
+    }
+
+    .section-2 .bg-blue {
+        width: 100%;
+        height: 100vh;
+    }
+
+    .section-2 .bg-blue .reason {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        text-align: center;
+    }
+
+    .section-2 .bg-blue .reason .figure-improve, .section-2 .bg-blue .reason .figure-store, .section-2 .bg-blue .reason .figure-reunion {
+        width: 33%;
+    }
+
+    .section-2 .bg-blue {
+        position: relative;
+    }
+
+    .section-2 .bg-blue .reason .figure-improve {
+        position: absolute;
+        top: 10%;
+        left: 0;
+        z-index: 12;
+    }
+
+    .section-2 .bg-blue .reason .figure-store {
+        position: absolute;
+        bottom: 50px;
+        right: 0;
+        left: 0;
+        margin: auto;
+        z-index: 12;
+    }
+
+    .section-2 .bg-blue .reason .figure-reunion {
+        position: absolute;
+        right: 0;
+        top: 10%;
+        z-index: 12;
+    }
+
+    .section-2 .bg-blue .reason .figure-improve img, .section-2 .bg-blue .reason .figure-store img, .section-2 .bg-blue .reason .figure-reunion img {
+        width: 350px;
+        height: auto;
+        padding: 20px;
     }
 }
 

@@ -68,9 +68,9 @@
         </section>
    
         
-        <section class="container slider">
-            <article class="container-card slider-slides">
-                <div class="card slider-slide active">
+        <section class="container slideshow-container">
+            <article class="container-card mySlides fade">
+                <div class="card ">
                    <div class="imgBx">
                         <img src="img/Fotografía-icono.png" alt="Fotografía-icono">
                         <button class="ver">Ver más<span class="material-icons arrow-right">
@@ -88,8 +88,8 @@
             </article>
                
 
-            <article class="container-card slider-slides">
-                <div class="card slider-slide">
+            <article class="container-card mySlides fade">
+                <div class="card">
                    <div class="imgBx">
                         <img src="img/Web-design-icono.png" alt="Web Design">
                         <button class="ver">Ver más<span class="material-icons arrow-right">
@@ -107,8 +107,8 @@
                 </div>
             </article>
                 
-            <article class="container-card slider-slides">
-                <div class="card slider-slide">
+            <article class="container-card mySlides fade">
+                <div class="card">
                    <div class="imgBx">
                         <img src="img/Marketing-icono.png" alt="Marketing Digital">
                         <button class="ver">Ver más<span class="material-icons arrow-right">
@@ -125,8 +125,8 @@
                 </div>
             </article>
 
-            <article class="container-card slider-slides">
-                <div class="card slider-slide">
+            <article class="container-card mySlides fade">
+                <div class="card">
                    <div class="imgBx">
                         <img src="img/tiendanube-icono.png" alt="Tienda Nube">
                         <button class="ver">Ver más<span class="material-icons arrow-right">
@@ -144,10 +144,17 @@
             </article>
             
             <div class="slider-btns">
-                <a class="prev arrow" href="#" data-dark="" rel="noopener">&laquo;</a>
-                <a href="#" class="next arrow" data-dark="" rel="noopener">&raquo;</a>
+                <button class="prev arrow" href="#" data-dark="" onclick="plusSlides(-1)">&#10094;</button>
+                <button href="#" class="next arrow" data-dark=""  onclick="plusSlides(1)">&#10095;</button>
             </div>
         </section>
+
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+        </div>
         
     </main>
 
@@ -164,26 +171,40 @@
     </section>
 
     <section class="section-2" id="section-3">
-        <article class="bg-black">
-            <h3><span>¿Por qué nosotros</span> y no otra Agengia?</h3>
+        <article class="bg-black" style="background-image: url(img/bg-agencia.jpg);">
+            <div>
+                <h3>¿Por qué nosotros y no otra Agengia?</h3>
+            </div>
             <figure class="figure-2">
-                <img src="img/loyal.jpg" alt="Team">
+                <img src="img/marketing-3.png" alt="Team">
                 <figcaption>Queremos colaborar con las pequeñas, medianas y grandes empresas, con todos nuestros servicios, junto con nuestra más alta creatividad y profesionalismo diseñamos contigo una estrategia realista, coherente, consistente y a la medidad de tus necesidades, con la finalidad de incrementar la competitividad, visibilidad y posicionamiento de tu marca en los medios digitales relevantes para tus clientes potenciales a precios economicos para que toda empresa o negocio disfrute de la tecnología</figcaption>
             </figure>
         </article>
-        <article class="bg-blue">
+        <article class="bg-blue" style="background-image: url(img/Strategy.jpg);">
             <h3>·3 Razones para contratarnos·</h3>
-            <ul>
-                <li><span class="material-icons">
-                done_all
-                </span>Te ayudamos a incrementar la demanda de tus productos y Servicios</li>
-                <li><span class="material-icons">
-                done_all
-                </span>Optimizamos tu inversión de mercadeo haciendola más efectiva</li>
-                <li><span class="material-icons">
-                done_all
-                </span>Consolidamos todas tus actividades con nuestros planes</li>
-            </ul>
+            <div class="reason">
+               <figure class="figure-improve">
+                    <img src="img/Improve.jpg" alt="">
+                    <figcaption>
+                        <span class="material-icons">
+                        done_all
+                        </span>Te ayudamos a incrementar la demanda de tus productos y Servicios</figcaption>
+                </figure>
+                <figure class="figure-reunion">
+                    <img src="img/reunion.jpg" alt="">
+                    <figcaption><span class="material-icons">
+                        done_all
+                        </span>Optimizamos tu inversión de mercadeo haciendola más efectiva
+                    </figcaption>
+                </figure>
+                <figure class="figure-store">
+                    <img src="img/Tienda.jpg" alt="">
+                    <figcaption><span class="material-icons">
+                        done_all
+                        </span>Consolidamos todas tus actividades con nuestros planes
+                    </figcaption>
+                </figure> 
+            </div>
         </article>
     </section>
 
@@ -223,6 +244,45 @@
         </span></button>
 
     <script src="Js/main.js" type="module"></script>
+    <script>
+        let slideIndex = 1;
+
+        showSlides(slideIndex)
+
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+  
+  // Thumbnail image controls
+    function currentSlide(n) {
+        showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+        let i;
+        const slides = document.getElementsByClassName("mySlides");
+        const dots = document.getElementsByClassName("dot");
+
+        if (n > slides.length) {
+            slideIndex = 1
+        }
+
+        if (n < 1) {
+            slideIndex = slides.length
+        }
+
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+
+        slides[slideIndex-1].style.display = "block";
+        dots[slideIndex-1].className += " active";
+    }
+    </script>
     
 </body>
 </html>
