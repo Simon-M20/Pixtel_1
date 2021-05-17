@@ -9,6 +9,7 @@
     <link href="css/hamburger.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a5cb44e5e5.js" crossorigin="anonymous"></script>
     
 </head>
 <body>
@@ -24,8 +25,8 @@
                 <li><a href="#" rel="noopener">Home</a></li>
                 <li><a href="#" rel="noopener">Blog</a></li>
                 <li><a href="#Servicios" rel="noopener">Servicios</a></li>
-                <li><a href="#" rel="noopener">Contactanos</a></li>
-                <li><a href="#section-3" rel="noopener">Acerca de Nosotros</a></li>
+                <li><a href="contactanos.html" rel="noopener">Contactanos</a></li>
+                <li><a href="#section-3" rel="noopener">Nosotros</a></li>
             </ul>
         </nav>
     </header>
@@ -37,8 +38,8 @@
                 <li><a href="#" rel="noopener">Home</a></li>
                 <li><a href="#" rel="noopener">Blog</a></li>
                 <li><a href="#Servicios" rel="noopener">Servicios</a></li>
-                <li><a href="#" rel="noopener">Contactanos</a></li>
-                <li><a href="#section-3" rel="noopener">Acerca de Nosotros</a></li>
+                <li><a href="contactanos.html" rel="noopener">Contactanos</a></li>
+                <li><a href="#section-3" rel="noopener">Sobre Nosotros</a></li>
             </ul>
         </nav>
     </aside>
@@ -53,7 +54,13 @@
     <!-- Fondo Principal -->
     <div class="fondo" style="background-image: url(img/default-header-bg.jpg);">
         <div>
-            <h1 class="text">Pixtel la mejor agencia de <span class="typed"></span></h1>
+            <h1 class="text"><span class="typed"></span></h1>
+            <div class="text" id="cadenas-texto">
+                <p>Pixtel la mejor agencia de <i class="service">Marketing Digital</i></p>
+                <p>Pixtel la mejor agencia de <i class="service">Diseño de Páginas Web</i></p>
+                <p>Pixtel la mejor agencia de <i class="service">Fotografía</i></p>
+                <p>Pixtel la mejor agencia de <i class="service">Desarrollo de Tienda Nube</i></p>
+            </div>
         </div>
     </div>
     
@@ -64,7 +71,7 @@
 
     <main class="main-content" id="Servicios">
         <section class="servicios">
-            <h2 class="subtitle">¿Qué servicios tenemos para tí?</h2>
+            <h2 class="subtitle">¿Qué ofrecemos para tí?</h2>
         </section>
    
         
@@ -81,7 +88,7 @@
                         <div class="contentBx">
                             <h4>Fotografía</h4>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam, quisquam culpa. Natus nulla architecto suscipit totam doloribus, veritatis optio aspernatur?</p>
-                            <a href="#" rel="noopener">Lorem, ipsum.</a> 
+                            <a href="#" rel="noopener">Ver más</a> 
                         </div>    
                     </div>
                 </div>
@@ -98,9 +105,9 @@
                     </div>
                     <div class="content">
                         <div class="contentBx">
-                            <h4>Diseño de Paginas Web</h4>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam, quisquam culpa. Natus nulla architecto suscipit totam doloribus, veritatis optio aspernatur?</p>
-                            <a href="#" rel="noopener">Lorem, ipsum.</a> 
+                            <h4>Diseño de Páginas Web</h4>
+                            <p>"Nuestros diseños son dinámicos, funcionales y adaptables a cualquier dispositivo electrónico."</p>
+                            <a href="#" rel="noopener">Ver más</a> 
                         </div>    
                     </div>
                         
@@ -119,7 +126,7 @@
                         <div class="contentBx">
                             <h4>Marketing Digital</h4>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam, quisquam culpa. Natus nulla architecto suscipit totam doloribus, veritatis optio aspernatur?</p>
-                            <a href="#" rel="noopener">Lorem, ipsum.</a> 
+                            <a href="#" rel="noopener">Ver más</a> 
                         </div>    
                     </div>    
                 </div>
@@ -137,7 +144,7 @@
                         <div class="contentBx">
                             <h4>Tienda Nube</h4>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam, quisquam culpa. Natus nulla architecto suscipit totam doloribus, veritatis optio aspernatur?</p>
-                            <a href="#" rel="noopener">Lorem, ipsum.</a> 
+                            <a href="#" rel="noopener">Ver más</a> 
                         </div>    
                     </div>
                 </div>
@@ -161,7 +168,7 @@
     <section class="slogan-2">
         <article class="call">
             <p><span>¿Qué esperás?</span> ¡Adquirí nuestros servicios y reactivá tu negocio online!</p>
-            <button type="submit"><a class="button" href="#" rel="noopener">Solicita un presupuesto</a> 
+            <button type="submit"><a class="button" href="contactanos.html" rel="noopener">Solicita un presupuesto</a> 
                 <span class="material-icons arrow-right">
                 east
                 </span>
@@ -177,7 +184,9 @@
             </div>
             <figure class="figure-2">
                 <img src="img/marketing-3.png" alt="Team">
-                <figcaption>Queremos colaborar con las pequeñas, medianas y grandes empresas, con todos nuestros servicios, junto con nuestra más alta creatividad y profesionalismo diseñamos contigo una estrategia realista, coherente, consistente y a la medidad de tus necesidades, con la finalidad de incrementar la competitividad, visibilidad y posicionamiento de tu marca en los medios digitales relevantes para tus clientes potenciales a precios economicos para que toda empresa o negocio disfrute de la tecnología</figcaption>
+                <figcaption>
+                    <p>Queremos colaborar con las pequeñas, medianas y grandes empresas, con todos nuestros servicios, junto con nuestra más alta creatividad y profesionalismo diseñamos contigo una estrategia realista, coherente, consistente y a la medidad de tus necesidades, con la finalidad de incrementar la competitividad, visibilidad y posicionamiento de tu marca en los medios digitales relevantes para tus clientes potenciales a precios economicos para que toda empresa o negocio disfrute de la tecnología</p>
+                </figcaption>
             </figure>
         </article>
         <article class="bg-blue" style="background-image: url(img/Strategy.jpg);">
@@ -208,7 +217,59 @@
         </article>
     </section>
 
-    <section>
+    <footer class="footer">
+        <section class="footer-section-1">
+            <figure>
+                <img width="150px" height="150px" src="img/Logo.jpeg" alt="Pixtel Logo">
+                <figcaption>Pixt<span>el</span></figcaption>
+            </figure>
+            <div class="oficinas">
+                <p>Oficinas</p>
+                <div class="argentina">
+                    <p>Argentina - </p>
+                    <p><a href="#">##########</a></p>
+                </div>
+                <div class="venezuela">
+                    <p>Venezuela - Caracas</p>
+                    <p><a href="https://api.whatsapp.com/send/?phone=5804262148909&text&app_absent=0" rel="noopener" target="_blank">+58 04262178909</a></p>
+                </div>
+            </div>
+            <div class="empresas">
+                <p>Empresa</p>
+                <ul>
+                    <li><a href="index.html" rel="noopener">Home</a></li>
+                    <li><a href="#Servicios">Servicios</a></li>
+                    <li><a href="contactanos.html">Contactanos</a></li>
+                    <li><a href="#section-3">Nosotros</a></li>
+                </ul>
+            </div>
+            <div class="footer-servicios">
+                <p>Servicios</p>
+                <ul>
+                    <li><a href="" rel="noopener">Marketing Digital</a></li>
+                    <li><a href="">Diseño de páginas web</a></li>
+                    <li><a href="">Fotografía</a></li>
+                    <li><a href="">Tienda Nube</a></li>
+                </ul>
+            </div>
+            <div class="slogan-3">
+                <p>Somos Pixtel, agencia de Marketing digital que te lleva al siguiente nivel ¿Trabajamos juntos?</p>
+            </div>
+        </section>
+        <section class="footer-section-2">
+            <article class="footer-article">
+                <div class="pixtel">
+                    <p>Pixtel, Agencia Digital ©2021  </p>
+                </div>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/pixtelcomunicaciones/" target="_blank"><i class="fa fa-instagram instagram"></i></a>
+                    <a href="#"><i class="fa fa-facebook-official facebook"></i></a>
+                </div>
+            </article>
+        </section>
+    </footer>
+
+    <!-- <section>
         <article>
             <h3>¡Lanza tu proyecto Hoy!</h3>
             <h4>Nuestra Agencia es ...</h4>
@@ -225,7 +286,7 @@
                 <figcaption>Confiable</figcaption>
             </figure>
         </article>
-    </section>
+    </section> -->
 
 
        
@@ -255,7 +316,7 @@
         showSlides(slideIndex += n);
     }
   
-  // Thumbnail image controls
+    // Thumbnail image controls
     function currentSlide(n) {
         showSlides(slideIndex = n);
     }

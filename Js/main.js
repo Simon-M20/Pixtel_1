@@ -20,12 +20,12 @@ window.onload = function() {
 }
 
 const typed = new Typed(".typed", {
-    strings: [
-        '<i class="service">Marketing Digital</i>', 
-        '<i class="service">Diseño de páginas Web</i>', 
-        '<i class="service">Fotografía</i>', 
-        '<i class="service">Desarrollo de Tienda Nube</i>'
-    ],
+    // strings: [
+    //     '<i class="service">Marketing Digital</i>', 
+    //     '<i class="service">Diseño de páginas Web</i>', 
+    //     '<i class="service">Fotografía</i>', 
+    //     '<i class="service">Desarrollo de Tienda Nube</i>'
+    // ],
     stringsElement: '#cadenas-texto', // ID del elemento que contiene cadenas de texto a mostrar.
 	typeSpeed: 75, // Velocidad en mlisegundos para poner una letra,
 	startDelay: 300, // Tiempo de retraso en iniciar la animacion. Aplica tambien cuando termina y vuelve a iniciar,
