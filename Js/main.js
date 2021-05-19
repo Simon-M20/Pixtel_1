@@ -9,7 +9,6 @@ document.addEventListener("DOMContentLoaded", e => {
     console.log(alerta)
     hamburgerBtn(".panel-btn", ".panel", ".nav-bar a")
     scrollTopBtn(".scroll-top")
-    
 })
 
 window.onload = function() {
