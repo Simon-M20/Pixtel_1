@@ -861,12 +861,13 @@ header {
 .footer .footer-section-1 .oficinas {
     display: flex;
     flex-direction: column;
-    /* line-height: 1.625; */
+    /* line-height: 1.2; */
 }
 
 .footer .footer-section-1 .oficinas .argentina, .footer .footer-section-1 .oficinas .venezuela {
     padding-left: 14px;
     padding-bottom: 14px;
+    /* list-style: 1.625; */
 }
 
 .footer .footer-section-1 .oficinas .argentina a, .footer .footer-section-1 .oficinas .venezuela a {
@@ -882,9 +883,13 @@ header {
     border-radius: 15px;
 }
 
-.footer .footer-section-1 .empresas p, .footer .footer-section-1 .footer-servicios p, .footer .footer-section-1 .oficinas p {
+.footer .footer-section-1 .empresas p, .footer .footer-section-1 .footer-servicios p {
     margin-bottom: 18px;
     /* font-size: 14px; */
+}
+
+.footer .footer-section-1 .oficinas p {
+    margin-bottom: 10px;
 }
 
 .footer .footer-section-1 .empresas ul, .footer .footer-section-1 .footer-servicios ul {
