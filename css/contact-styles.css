@@ -125,6 +125,11 @@
     color: #f2f2f2;
 }
 
+.form .formulario .form-datos .submit input::placeholder, .form .formulario .form-datos input::placeholder {
+    color: #f2f2f2;
+    opacity: .7;
+} 
+
 .form .formulario .form-datos .submit input:focus {
     border: 2px solid #ff914d;
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
