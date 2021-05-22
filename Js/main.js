@@ -1,4 +1,3 @@
-import alerta from "./modules/alert.js"
 import hamburgerBtn from "./modules/hamburger_btn.js"
 import scrollTopBtn from "./modules/scroll-to-top-btn.js"
 
