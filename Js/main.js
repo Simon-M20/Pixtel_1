@@ -10,10 +10,13 @@ document.addEventListener("DOMContentLoaded", e => {
 })
 
 window.onload = function() {
-    let loader = document.getElementById("loader")
+    setTimeout(() => {
+        let loader = document.getElementById("loader")
+        loader.style.visibility = "hidden";
+        loader.style.opacity = "0"
+        
+    }, 5000);
 
-    loader.style.visibility = "hidden";
-    loader.style.opacity = "0"
 }
 
 const typed = new Typed(".typed", {
