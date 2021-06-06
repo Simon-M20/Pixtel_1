@@ -11,6 +11,8 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
     <script src="https://kit.fontawesome.com/a5cb44e5e5.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <link  rel="icon" href="img/Logo.ico" type="image/icon">
 </head>
 <body>
     
@@ -63,44 +65,81 @@
         </article>
     </section>
 
-    <form class="form" id="contact" style="background-image: url(img/bg-contact-1.jpg);">
-        <div class="formulario">
-            <div class="form-title">
-               <h2>¿En que podemos ayudarte?</h2>
-                <p>Queremos saber sobre tu negocio y ayudarte a crecer</p> 
+    <section class="form" id="contact">
+        <div class="container-form">
+            <div class="contactInfo">
+                <div>
+                    <h2>Contact Info</h2>
+                    <ul class="info">
+                        <li>
+                            <span><img src="img/location.png" alt="Location icon"></span>
+                            <span>
+                            · Argentina ·
+                                <br>
+                            · Venezuela ·
+                            </span>
+                        
+                        </li>
+                        <li>
+                            <span><img src="img/email.png" alt="Mail icon"></span>
+                            <span>Lorem@impsum.com
+                            </span>                            
+                        </li>
+                        <li>
+                            <span><img src="img/call.png" alt="call icon"></span>
+                            <span>
+                            · <a href="https://api.whatsapp.com/send/?phone=%2B5493515449189&text&app_absent=0">+54 9 3515 44-9189</a> ·
+                                <br>
+                            · <a href="https://api.whatsapp.com/send/?phone=5804262148909&text&app_absent=0" rel="noopener" target="_blank">+58 426-2148909</a> ·
+                            </span>                            
+                        </li>
+                    </ul>
+                </div>
+                <ul class="sci">
+                    <li><a href="https://www.instagram.com/pixtelcomunicaciones/" target="_blank"><img src="img/ig.png" alt="icon"></a></li>
+                    <li><a href="#"><img src="img/facebook.png" alt="icon"></a></li>
+                </ul>
             </div>
-            <div class="form-datos">
-                <div class="form-1">
-                    <div>
-                        <label for="name">Nombre <span>*</span></label><br>
-                    <input type="text" name="name" title="Nombre" placeholder="Nombre" required>
+            <div class="contactForm">
+                <h2>Envianos mensaje</h2>
+                <form class="formBox" target="_blank" action="https://formsubmit.co/saimoncoupon@gmail.com" method="POST">
+                    <div class="inputBox w50">
+                        <input type="text" name="name" title="El Nombre no es válido, sólo acepta letras y espacios en blanco" pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$" required>
+                        <span>Nombre</span>
                     </div>
-                    <div>
-                        <label for="Numero-de-telefono">Número de télefono <span>*</span></label>
-                        <input type="text" name="numero-de-telefono" placeholder="Nº de télefono" required>
+                    <div class="inputBox w50">
+                        <input type="text" name="last-name" title="El Apellido no es válido, sólo acepta letras y espacios en blanco" pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$" required>
+                        <span>Apellido</span>
                     </div>
-                </div>
-                <div class="form-1">
-                    <div>
-                       <label for="city">Ciudad</label><br>
-                        <input type="text" name="city" title="city" placeholder="Ciudad"> 
+                    <div class="inputBox w50">
+                        <input type="email" name="email" title="Email incorrecto" pattern="^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$"  required>
+                        <span>Email</span>
                     </div>
-                    <div>
-                        <label for="company-name">Nombre de la empresa</label>
-                        <input type="text" name="company-name" title="company-name" placeholder="Nombre de la empresa">
+                    <div class="inputBox w50">
+                        <input type="text" required>
+                        <span>Numero de tlf</span>
                     </div>
-                </div>
-                
-                <label for="email">Correo electrónico <span>*</span></label>
-                <input type="text" name="email" title="email" placeholder="ejemplo@email.com" id="email" required>
-                <label for="request">¿Cómo podemos ser parte de su proyecto / Cuál es su solicitud?</label>
-                <input type="placeholder" id="message" placeholder="Dejanos tu mensaje" name="message">
-                <div class="submit">
-                    <input type="submit" value="Enviar">
-                </div>
+                    <div class="inputBox w-100">
+                        <textarea title="Tú comentario no debe exceder los 255 caracteres" data-pattern="^.{1,255}$" required></textarea>
+                        <span>Escribe tu mensaje</span>
+                    </div>
+                    <div class="inputBox w-100">
+                        <input type="submit" value="Enviar">
+                    </div>
+                    <input type="hidden" name="_template" value="table">
+<!-- 
+                    <div class="contact_fomr_loader none">
+                        <img src="assets/oval.svg" alt="Cargando">
+                    </div>
+                    <div class="contact-form-response none">
+                        <p>Los datos han sido enviados</p>
+                        <p>Pronto serás contactado por un miembro de nuestro equipo</p>
+                    </div> -->
+                </form>
             </div>
         </div>
-    </form>
+    </section>
+
 
     <section class="contact">
         <article>
@@ -207,7 +246,7 @@
         </span>
     </button>
 
-    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+   
     <script src="Js/main.js" type="module"></script>
 </body>
 </html>

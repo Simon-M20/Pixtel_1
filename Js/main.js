@@ -1,3 +1,4 @@
+import contactFormValidation from "./modules/form-validation.js"
 import hamburgerBtn from "./modules/hamburger_btn.js"
 import scrollTopBtn from "./modules/scroll-to-top-btn.js"
 
@@ -7,6 +8,8 @@ import scrollTopBtn from "./modules/scroll-to-top-btn.js"
 document.addEventListener("DOMContentLoaded", e => {
     hamburgerBtn(".panel-btn", ".panel", ".nav-bar a")
     scrollTopBtn(".scroll-top")
+    contactFormValidation()
+    
 })
 
 window.onload = function() {
@@ -39,3 +42,4 @@ const typed = new Typed(".typed", {
 	cursorChar: '|', // Caracter para el cursor
 	contentType: 'html', // 'html' o 'null' para texto sin formato
 })
+
