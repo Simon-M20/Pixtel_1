@@ -370,10 +370,10 @@
     transition: 0.3s;
 }
 
-.contactForm .formBox .inputBox input:valid ~ span,
-.contactForm .formBox .inputBox textarea:valid ~ span, 
-.contactForm .formBox .inputBox input:focus ~ span, 
-.contactForm .formBox .inputBox textarea:focus ~ span {
+.contactForm .formBox .inputBox input:valid ~ .form-span,
+.contactForm .formBox .inputBox textarea:valid ~ .form-span, 
+.contactForm .formBox .inputBox input:focus ~ .form-span, 
+.contactForm .formBox .inputBox textarea:focus ~ .form-span {
     transform: translateY(-20px);
     font-size: 12px !important;
     font-weight: 300;
@@ -488,7 +488,6 @@
 
 
 }
-
 
 @media screen and (min-width: 1024px) {
     .contact, .question {
