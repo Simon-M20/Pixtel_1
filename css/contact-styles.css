@@ -450,6 +450,7 @@
     .form .container-form .contactForm {
         width: 100%;
         height: auto;
+        margin-top: 24px;
     }
 
     .form .container-form .contactInfo {
@@ -469,6 +470,7 @@
 @media screen and (max-width: 600px) {
     .form .container-form .contactForm {
         padding: 25px;
+        margin-top: 64px;
     }
 
     .form .container-form .contactInfo {
@@ -499,7 +501,6 @@
         font-size: 4rem;
     }
 
-    
 }
 
 

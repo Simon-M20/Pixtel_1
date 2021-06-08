@@ -925,6 +925,7 @@ header {
 
 .container-card-2 .card:hover {
     height: 300px;
+    cursor: pointer;
 }
 
 .container-card-2 .card .imgBx {
@@ -1010,7 +1011,6 @@ header {
     background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgb(0, 0, 0) 0%, rgba(34,34,34,1) 90% );
     text-align: center;
     color: #f2f2f2;
-    margin-left: 14px;
 }
 
 .footer .footer-section-1 figure {
@@ -1019,6 +1019,7 @@ header {
     justify-content: center;
     align-items: center;
     width: 100%;
+    padding-top: 34px;
 }
 
 .footer .footer-section-1 figure img, .footer .footer-section-1 figure figcaption {
@@ -1033,6 +1034,11 @@ header {
     width: 70%;
     margin-top: 2.5rem;
     text-align: left;
+    padding-left: 14px;
+}
+
+.footer .footer-section-1 .empresas ul, .footer .footer-section-1 .footer-servicios ul {
+    padding-left: 14px;
 }
 
 .footer .footer-section-1 .oficinas {
