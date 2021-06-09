@@ -258,6 +258,12 @@ header {
     font-size: 1.8rem;
 }
 
+@media screen and (max-width: 325px) {
+    .fondo div .text .service {
+        font-size: 1.5rem;
+    }
+}
+
 .main-content {
     /* height: 100vh; */
     padding: 84px 0 92px 0;
