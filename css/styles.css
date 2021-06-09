@@ -264,11 +264,11 @@ header {
     background-image: radial-gradient( circle 621px at 25.3% 13.8%,  rgba(255,255,255,1) 0%, rgba(234,236,255,1) 90% );
 }
 
-@media screen and (max-width: 769px) {
+/* @media screen and (max-width: 769px) {
     .main-content {
         height: 77vh;
     }
-}
+} */
 
 @media screen and (max-width: 550px) {
     .main-content {
@@ -792,7 +792,11 @@ header {
 
 @media screen and (max-width: 321px) {
     .bg-black::before {
-       height: 125vh;
+       height: 128vh;
+   }
+
+   .bg-black {
+       height: 128vh;
    }
    
 }

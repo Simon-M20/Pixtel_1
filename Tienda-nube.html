@@ -4,21 +4,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contactanos</title>
-    <link rel="stylesheet" href="css/contact-styles.css">
+    <title>Tienda Nube</title>
     <link rel="stylesheet" href="css/styles.css">
     <link href="css/hamburger.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet">
+    rel="stylesheet">
+
     <script src="https://kit.fontawesome.com/a5cb44e5e5.js" crossorigin="anonymous"></script>
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <link  rel="icon" href="img/Logo.ico" type="image/icon">
 </head>
 <body>
     
+    <!-- Nav-bar -->
     <header>
         <figure class="logo">
-            <img class="logo_img" src="img/Logo.jpeg" alt="Logo">
+            <img loading="lazy" class="logo_img" src="img/Logo.jpeg" alt="Logo">
             <figcaption class="title">Pixt<span>el</span></figcaption>
         </figure>
         <nav class="nav-bar-responsive">
@@ -26,7 +26,7 @@
                 <li><a href="index.html" rel="noopener">Home</a></li>
                 <!-- <li><a href="#" rel="noopener">Blog</a></li> -->
                 <li><a href="index.html" rel="noopener">Servicios</a></li>
-                <li><a href="#contact" rel="noopener">Contactanos</a></li>
+                <li><a href="contactanos.html" rel="noopener">Contactanos</a></li>
                 <li><a href="index.html" rel="noopener">Nosotros</a></li>
             </ul>
         </nav>
@@ -39,7 +39,7 @@
                 <li><a href="index.html" rel="noopener">Home</a></li>
                 <!-- <li><a href="#" rel="noopener">Blog</a></li> -->
                 <li><a href="index.html" rel="noopener">Servicios</a></li>
-                <li><a href="#contact" rel="noopener">Contactanos</a></li>
+                <li><a href="contactanos.html" rel="noopener">Contactanos</a></li>
                 <li><a href="index.html" rel="noopener">Sobre Nosotros</a></li>
             </ul>
         </nav>
@@ -52,93 +52,13 @@
         </span>
     </button>
 
-
+    <!-- Fondo Principal -->
     <div class="fondo" style="background-image: url(img/default-header-bg.jpg);">
         <div>
-            <h1 class="text">Contac<span>tanos</span></h1>
+            <h1 class="text">Tien<span>da Nu</span>be</h1>
         </div>
     </div>
 
-    <section class="question">
-        <article>
-            <p>¿Usted tiene preguntas? Nosotros tenemos las respuestas</p>
-        </article>
-    </section>
-
-    <section class="form" id="contact">
-        <div class="container-form">
-            <div class="contactInfo">
-                <div>
-                    <h2>Contact Info</h2>
-                    <ul class="info">
-                        <li>
-                            <span><img src="img/location.png" alt="Location icon"></span>
-                            <span>
-                            · Argentina ·
-                                <br>
-                            · Venezuela ·
-                            </span>
-                        
-                        </li>
-                        <li>
-                            <span><img src="img/email.png" alt="Mail icon"></span>
-                            <span>Lorem@impsum.com
-                            </span>                            
-                        </li>
-                        <li>
-                            <span><img src="img/call.png" alt="call icon"></span>
-                            <span>
-                            · <a href="https://api.whatsapp.com/send/?phone=%2B5493515449189&text&app_absent=0">+54 9 3515 44-9189</a> ·
-                                <br>
-                            · <a href="https://api.whatsapp.com/send/?phone=5804262148909&text&app_absent=0" rel="noopener" target="_blank">+58 426-2148909</a> ·
-                            </span>                            
-                        </li>
-                    </ul>
-                </div>
-                <ul class="sci">
-                    <li><a href="https://www.instagram.com/pixtelcomunicaciones/" target="_blank"><img src="img/ig.png" alt="icon" loading="lazy"></a></li>
-                    <!-- <li><a href="#"><img src="img/facebook.png" alt="icon"></a></li> -->
-                </ul>
-            </div>
-            <div class="contactForm">
-                <h2>¿En qué podemos ayudarte?</h2>
-                <p>Queremos saber sobre tu negocio y ayudarte a crecer</p>
-                <form class="formBox" target="_blank" action="https://formsubmit.co/saimoncoupon@gmail.com" method="POST">
-                    <div class="inputBox w50">
-                        <input type="text" name="name" title="El Nombre no es válido, sólo acepta letras y espacios en blanco" pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$" required>
-                        <span class="form-span">Nombre</span>
-                    </div>
-                    <div class="inputBox w50">
-                        <input type="text" name="last-name" title="El Apellido no es válido, sólo acepta letras y espacios en blanco" pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$" required>
-                        <span class="form-span">Apellido</span>
-                    </div>
-                    <div class="inputBox w50">
-                        <input type="email" name="email" title="Email incorrecto" pattern="^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$"  required>
-                        <span class="form-span">Email</span>
-                    </div>
-                    <div class="inputBox w50">
-                        <input type="text" required>
-                        <span class="form-span">Numero de tlf</span>
-                    </div>
-                    <div class="inputBox w-100">
-                        <textarea title="Tú comentario no debe exceder los 255 caracteres" data-pattern="^.{1,255}$" required></textarea>
-                        <span class="form-span">Escribe tu mensaje</span>
-                    </div>
-                    <div class="inputBox w-100">
-                        <input type="submit" value="Enviar">
-                    </div>
-                    <input type="hidden" name="_template" value="table">
-
-                </form>
-            </div>
-        </div>
-    </section>
-
-    <section class="contact">
-        <article>
-            <p>Preparamos presupuestos personalizados para tí</p>
-        </article>
-    </section>
 
     <footer class="footer">
         <section class="footer-section-1">
@@ -171,10 +91,10 @@
             <div class="footer-servicios">
                 <p>Servicios</p>
                 <ul>
-                    <li><a href="" rel="noopener">Marketing Digital</a></li>
-                    <li><a href="">Diseño de páginas web</a></li>
-                    <li><a href="">Fotografía</a></li>
-                    <li><a href="">Tienda Nube</a></li>
+                    <li><a href="Marketing.html" rel="noopener">Marketing Digital</a></li>
+                    <li><a href="Diseño-Web.html">Diseño de páginas web</a></li>
+                    <li><a href="Fotografía.html">Fotografía</a></li>
+                    <li><a href="Tienda-nube.html">Tienda Nube</a></li>
                 </ul>
             </div>
             <div class="slogan-3">
@@ -188,11 +108,14 @@
                 </div>
                 <div class="social-links">
                     <a href="https://www.instagram.com/pixtelcomunicaciones/" target="_blank"><i class="fa fa-instagram instagram"></i></a>
-                    <!-- <a href="#"><i class="fa fa-facebook-official facebook"></i></a> -->
+                        <!-- <a href="#"><i class="fa fa-facebook-official facebook"></i></a> -->
                 </div>
             </article>
         </section>
     </footer>
+    
+
+
 
 
 
@@ -223,12 +146,15 @@
         </div>
     </section>
 
+
     <button class="scroll-top" data-dark="" title="Go to top"><span class="material-icons">
         expand_less
         </span>
     </button>
+        
 
-   
     <script src="Js/main.js" type="module"></script>
+
+    
 </body>
 </html>
