@@ -252,7 +252,8 @@ header {
 
 .fondo div .text .service {
     font-weight: bold;
-    color: #ff914d;
+    /* color: #ff914d; */
+    color: #fff;
     font-style: normal;
 }
 
