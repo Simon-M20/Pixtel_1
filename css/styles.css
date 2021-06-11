@@ -647,6 +647,53 @@ header {
 .hidden {
     opacity: 0;
     visibility: hidden;
+    transition: all .3s ease-in-out;
+}
+
+.container-card-2 .card .content-card p {
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.container-card-2 .card:hover .content-card {
+    visibility: visible;
+    opacity: 1;
+    margin-top: -40px;
+    transition-delay: .3s;
+}
+
+@media screen and (max-width: 1000px) {
+     .container-card-2 {
+        height: 190vh;
+    }
+    
+}
+
+@media screen and (max-width: 550px) {
+    .container-card-2 {
+       height: 200vh;
+   }
+   
+}
+
+@media screen and (max-width: 410px) {
+    .container-card-2 {
+       height: 250vh;
+   }
+   
+}
+
+
+.footer {
+    display: flex;    
+    width: 100%;
+    height: auto;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    flex-direction: column;
+    
 }
 /**/
 
@@ -706,6 +753,19 @@ header {
 @keyframes load {
     0% {
       top: 0;
+    }
+    0%,50% {
+        background: #fff;
+        box-shadow: none;
+    }
+
+    50.1%,100% {
+        background: #ff914d;
+        box-shadow: 0 0 5px #ff914d,
+                    0 0 15px #ff914d,
+                    0 0 30px #ff914d,
+                    0 0 60px #ff914d,
+                    0 0 90px #ff914d;
     }
   
     50% {
