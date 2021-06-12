@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", e => {
     hamburgerBtn(".panel-btn", ".panel", ".nav-bar a")
     scrollTopBtn(".scroll-top")
     contactFormValidation()
-    
+    typed()
 })
 
 window.onload = function() {
