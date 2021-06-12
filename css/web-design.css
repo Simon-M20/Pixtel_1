@@ -169,7 +169,8 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-color: #fff;
+    background-color: transparent;
+    /* background-image: radial-gradient( circle 621px at 25.3% 13.8%,  rgba(255,255,255,1) 0%, rgba(234,236,255,1) 90% ); */
     box-shadow: 0 30px 60px rgba(0,0,0,.2);
     margin: 14px 32px;
     border-radius: 8px;
@@ -212,7 +213,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #999;
+    color: #333;
 }
 
 .box .percent .number h2 {
@@ -225,9 +226,13 @@
 
 .box .text-pie {
     padding: 10px 0 0;
-    color: #999;
+    color: #333;
     font-weight: 700;
     letter-spacing: 1px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 

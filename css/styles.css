@@ -472,7 +472,7 @@ header {
 }
 
 .container-card .card .content .contentBx a:hover {
-    background-color: #ff914d;
+    background-image: linear-gradient( 112.7deg,  rgba(253,185,83,1) 11.4%, rgba(255,138,0,1) 70.2% );
     color: #fff;
     font-weight: bold;
     text-transform: uppercase;

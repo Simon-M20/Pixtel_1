@@ -18,7 +18,7 @@ window.onload = function() {
         loader.style.visibility = "hidden";
         loader.style.opacity = "0"
         
-    }, 5000);
+    }, 3000);
 
 }
 
