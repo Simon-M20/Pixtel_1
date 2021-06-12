@@ -930,7 +930,7 @@ header {
 }
 
 .container-card-2 .card:hover {
-    height: 300px;
+    height: 350px;
     cursor: pointer;
 }
 
@@ -962,9 +962,15 @@ header {
     transition: all .3s ease-in-out;
 }
 
+.container-card-2 .card .content-card h2 {
+    text-transform: uppercase;
+    margin-bottom: 8px;
+}
+
 .container-card-2 .card .content-card p {
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 300;
+    line-height: 1.625;
 }
 
 .container-card-2 .card:hover .content-card {
@@ -1212,12 +1218,12 @@ header {
     }
 
     50.1%,100% {
-        background: #e74c3c;
-        box-shadow: 0 0 5px #e74c3c,
-                    0 0 15px #e74c3c,
-                    0 0 30px #e74c3c,
-                    0 0 60px #e74c3c,
-                    0 0 90px #e74c3c;
+        background: #ff914d;
+        box-shadow: 0 0 5px #ff914d,
+                    0 0 15px #ff914d,
+                    0 0 30px #ff914d,
+                    0 0 60px #ff914d,
+                    0 0 90px #ff914d;
     }
 }
 
@@ -1240,10 +1246,10 @@ header {
     }
 
     50.1%,100% {
-        color: #e74c3c;
-        text-shadow: 0 0 5px #e74c3c,
-                    0 0 15px #e74c3c,
-                    0 0 30px #e74c3c;
+        color: #ff914d;
+        text-shadow: 0 0 5px #ff914d,
+                    0 0 15px #ff914d,
+                    0 0 30px #ff914d;
     }
 }
 

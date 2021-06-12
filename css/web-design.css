@@ -1,3 +1,176 @@
 .text span {
     background-color: #ff914d;
 }
+
+.section-web .article-web {
+    background-color: #e9e9e9;
+    padding: 64px 0;
+    height: 100%;
+    width: 100%;
+}
+
+.section-web .article-web h2 {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 25px;
+    margin: 10px 0 8px 0;
+    padding: 10px;
+    position: relative;
+}
+
+.section-web .article-web h2::before {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    margin: 20px 0 0 0;
+    width: 8rem;
+    height: 4px;
+    background: #000;
+}
+
+.section-web .article-web figure {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 28px;
+}
+
+.section-web .article-web figure figcaption, .section-web .article-web figure img {
+    width: 100%;
+    padding: 8px 14px;
+}
+
+.section-web .article-web figure figcaption p {
+    text-align: justify;
+    line-height: 1.625;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.section-web {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.section-web .article-web-2 {
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient( circle farthest-corner at 50.3% 44.5%,  rgb(0, 0, 0) 0%, rgb(30, 36, 43) 100.2% );;
+    padding: 64px 0;
+    color: #f2f2f2;
+}
+
+.section-web .article-web-2 .title-web {
+    position: relative;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    padding: 20px 10px 0 10px;
+    text-align: center;
+}
+
+.section-web .article-web-2 .title-web::before {
+    content: "";
+    position: absolute;
+    bottom: -25px;
+    margin: 20px 0 10px 0;
+    width: 8rem;
+    height: 4px;
+    background: #fff;
+}
+
+.section-web .article-web-2 .web-tools {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    margin-top: 18px;
+    padding: 15px 32px;
+    height: 100%;
+    flex-wrap: wrap;
+}
+
+.section-web .article-web-2 .div-web {
+    margin-top: 14px;
+    padding: 12px 20px;
+    text-align: center;
+    opacity: .75;
+    width: 95%;
+    line-height: 1.625;
+}
+
+.section-web .article-web-2 .web-tools .responsive, .section-web .article-web-2 .web-tools .speed, .section-web .article-web-2 .web-tools .seo, .section-web .article-web-2 .web-tools .sem, .section-web .article-web-2 .web-tools .semantic {
+    width: 100%;
+    line-height: 1.625;
+    margin: 20px 0;
+    /* padding: 12px; */
+    text-align: justify;
+    height: 100%;
+    border-bottom: none;
+    border-right: none;
+}
+
+.section-web .article-web-2 .web-tools .responsive figure figcaption h3, .section-web .article-web-2 .web-tools .speed figure figcaption h3, .section-web .article-web-2 .web-tools .seo figure figcaption h3, .section-web .article-web-2 .web-tools .sem figure figcaption h3, .section-web .article-web-2 .web-tools .semantic figure figcaption h3 {
+    text-align: center;
+    margin: 12px 0;
+}
+
+.section-web .article-web-2 .web-tools .responsive figure img, .section-web .article-web-2 .web-tools .speed figure img, .section-web .article-web-2 .web-tools .seo figure img, .section-web .article-web-2 .web-tools .sem figure img, .section-web .article-web-2 .web-tools .semantic figure img {
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+}
+
+
+
+
+
+@media screen and (min-width: 1024px) {
+    .section-web .article-web figure figcaption {
+        width: 45%;
+        padding-left: 30px;
+    }
+
+    .section-web .article-web figure img {
+        width: 55%;
+    }
+
+    .section-web .article-web-2 .web-tools {
+        padding: 0 32px;
+    }
+
+    .section-web .article-web-2 .web-tools .responsive, .section-web .article-web-2 .web-tools .speed, .section-web .article-web-2 .web-tools .seo, .section-web .article-web-2 .web-tools .sem, .section-web .article-web-2 .web-tools .semantic {
+        width: 30%;
+        height: 100%;
+        padding: 20px;
+        margin: 5px 15px;
+        text-align: justify;
+        line-height: 1.625;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        text-align: justify;
+        border-right: 1px solid #fff;
+        border-bottom: none;
+    }
+
+    .section-web .article-web-2 .web-tools .responsive figure figcaption h3, .section-web .article-web-2 .web-tools .speed figure figcaption h3, .section-web .article-web-2 .web-tools .seo figure figcaption h3, .section-web .article-web-2 .web-tools .sem figure figcaption h3, .section-web .article-web-2 .web-tools .semantic figure figcaption h3 {
+        text-align: center;
+        margin-bottom: 12px;
+    }
+
+    .section-web .article-web-2 .web-tools .responsive figure img, .section-web .article-web-2 .web-tools .speed figure img, .section-web .article-web-2 .web-tools .seo figure img, .section-web .article-web-2 .web-tools .sem figure img, .section-web .article-web-2 .web-tools .semantic figure img {
+        width: 100%;
+        height: auto;
+        margin-top: 20px;
+        /* padding: 10px; */
+    }
+
+    
+}
