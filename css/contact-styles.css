@@ -100,7 +100,6 @@
     list-style: none;
     display: flex;
     margin: 20px 0;
-    cursor: pointer;
     align-items: center;
     justify-content: flex-start;
 }
@@ -109,6 +108,11 @@
     text-decoration: none;
     color: #fff;
     line-height: 1.625;
+}
+
+.form .container-form .contactInfo .info li span a:hover, .form .container-form .contactInfo .info li .email:hover {
+    opacity: .75;
+    cursor: pointer;
 }
 
 .form .container-form .contactInfo .info li span:nth-child(1) {
@@ -140,6 +144,10 @@
 
 .form .container-form .contactInfo .sci li a {
     text-decoration: none;
+}
+
+.form .container-form .contactInfo .sci li a:hover {
+    opacity: .75;
 }
 
 .form .container-form .contactInfo .sci li img {
