@@ -4,9 +4,10 @@
 
 .cloud {
     min-height: 100%;
+    /* background-image: radial-gradient( circle 621px at 25.3% 13.8%,  rgba(255,255,255,1) 0%, rgba(234,236,255,1) 90% ); */
 }
 
-.cloud .article-tienda {
+.cloud .article-tienda, .cloud .article-cloud {
     height: 100%;
     padding: 64px 0;
     /* background-image: linear-gradient( 109.6deg,  rgb(42, 38, 95) 11.2%, rgba(45,51,87,.35) 100.2% ); */
@@ -22,6 +23,11 @@
     padding: 10px;
     position: relative;
     letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #2c3356;
+    font-weight: bold;
 }
 
 .cloud .article-tienda h2::before {
@@ -31,7 +37,7 @@
     margin: 20px 0 0 0;
     width: 8rem;
     height: 4px;
-    background: #000;
+    background: #2c3356;
 }
 
 .cloud .article-tienda figure {
@@ -40,15 +46,12 @@
     align-items: center;
     padding: 0 12px;
     flex-wrap: wrap;
-    /* background: url(/img/cloud-bg.png);
-    background-position: right bottom;
-    background-attachment: fixed;
-    background-repeat: no-repeat; */
 }
 
 .cloud .article-tienda figure img {
     width: 100%;
     padding: 12px;
+    
 }
 
 .cloud .article-tienda figure figcaption {
@@ -59,33 +62,92 @@
     padding: 15px;
 }
 
-.cloud .article-tienda figure figcaption p {
+.cloud .article-tienda figure figcaption p, .cloud .article-cloud figure figcaption p {
     line-height: 1.625;
     margin-bottom: 12px;
     text-align: justify;
 }
 
-.cloud .article-tienda figure figcaption ul li {
+.cloud .article-tienda figure figcaption ul li, .cloud .article-cloud figure figcaption ul li {
     padding-left: 24px;
     list-style: none;
     line-height: 1.625;
     text-align: justify;
 }
 
-/* .cloud .article-tienda .cloud-p {
-    text-align: center;
-    font-weight: 700;
-    padding: 0 18px;
-    margin-top: 8px;
+/* .cloud .article-cloud{
+    height: 100%;
+    padding: 64px 0;
 } */
 
-
-
-.cloud .article-cloud{
-    height: 100vh;
+.cloud .article-cloud h2 {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 25px;
+    margin: 10px 0 8px 0;
+    padding: 0 10px;
+    position: relative;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #2c3356;
 }
 
+.cloud .article-cloud h2::before {
+    content: "";
+    position: absolute;
+    bottom: -12px;
+    margin: 20px 0 0 0;
+    width: 8rem;
+    height: 4px;
+    background: #2c3356;
+}
+
+.cloud .article-cloud figure {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0 12px;
+    margin-top: 3rem;
+}
+
+.cloud .article-cloud figure figcaption {
+    width: 100%;
+    padding: 10px 15px;
+}
+
+/* .cloud .article-cloud figure figcaption p {
+    line-height: 1.625;
+    margin-bottom: 15px;
+    text-align: justify;
+} */
+
+/* .cloud .article-cloud figure figcaption ul li {
+    padding-left: 24px;
+    list-style: none;
+    line-height: 1.625;
+    text-align: justify;
+} */
+
+.cloud .article-cloud figure img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12px;
+    width: 90%;
+    height: auto;
+}
+
+
+
+
 @media screen and (min-width: 1024px) {
+    .cloud .article-cloud, .cloud .article-tienda {
+        padding: 32px 0;
+    }
+
     .cloud .article-tienda figure {
         padding: 0 18px;
     }
@@ -98,6 +160,11 @@
     .cloud .article-tienda figure figcaption {
         width: 55%;
         padding: 0 15px;
+    }
+
+    .cloud .article-cloud figure figcaption {
+        width: 50%;
+        padding: 10px 15px;
     }
 
     

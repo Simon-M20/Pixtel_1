@@ -60,7 +60,7 @@ body {
 
 .panel {
     position: fixed;
-    z-index: 997;
+    z-index: 998;
     top: 0;
     /* padding-top: 13rem; */
     /* padding-bottom: 8rem; */
@@ -72,7 +72,7 @@ body {
     justify-content: center;
     align-items: center;
     margin: auto;
-    background-color: #111;
+    background-image: radial-gradient( circle farthest-corner at 50.3% 44.5%,  rgb(0, 0, 0) 0%, rgb(30, 36, 43) 100.2% );;
     opacity: .8;
     width: 100%;
     height: 100vh;
@@ -259,8 +259,8 @@ header {
 }
 
 .main-content {
-    /* height: 100vh; */
-    padding: 84px 0 92px 0;
+    height: 100%;
+    padding: 64px 0;
     width: 100%;
     /* background-image: linear-gradient( 109.6deg,  rgba(204,228,247,1) 11.2%, rgba(237,246,250,1) 100.2% ); */
     background-image: radial-gradient( circle 621px at 25.3% 13.8%,  rgba(255,255,255,1) 0%, rgba(234,236,255,1) 90% );
@@ -272,7 +272,7 @@ header {
     }
 } */
 
-@media screen and (max-width: 550px) {
+/* @media screen and (max-width: 550px) {
     .main-content {
         height: 105vh;
         padding: 34px 0;
@@ -305,7 +305,7 @@ header {
         height: 134vh;
         padding: 44px 0;
     }
-}
+} */
 
 .subtitle {
     width: 100%;
@@ -628,6 +628,7 @@ header {
     background-image: linear-gradient( 94.3deg,  rgb(15, 20, 39) 10.9%, rgb(33, 39, 128) 87.1% );
     color: #f2f2f2;
     padding: 0 .8rem;
+    
 }
 
 .slogan-phrase {
@@ -778,7 +779,7 @@ header {
 }
 
 
-@media screen and (max-width: 550px) {
+/* @media screen and (max-width: 550px) {
     .bg-black, .bg-black::before {
        height: 100vh;
    }
@@ -801,11 +802,11 @@ header {
        height: 128vh;
    }
    
-}
+} */
 
 .bg-black::before {
     position: absolute;
-    height: 100vh;
+    height: 100%;
     width: 100%;
     top: 0;
     bottom: 0;
@@ -909,12 +910,13 @@ header {
 .container-card-2 {
     /* position: relative; */
     width: 100%;
-    height: 100vh;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     padding: 30px;
+    margin-top: 20px;
 }
 
 .container-card-2 .card {
@@ -922,7 +924,7 @@ header {
     max-width: 300px;
     height: 215px;
     background: #fff;
-    margin: 30px 40px;
+    margin: 50px 40px;
     padding: 20px 15px;
     flex-direction: column;
     box-shadow: 0 5px 20px rgba(0, 0, 0, .5);
@@ -930,7 +932,7 @@ header {
 }
 
 .container-card-2 .card:hover {
-    height: 350px;
+    height: 300px;
     cursor: pointer;
 }
 
@@ -980,7 +982,7 @@ header {
     transition-delay: .3s;
 }
 
-@media screen and (max-width: 1000px) {
+/* @media screen and (max-width: 1000px) {
      .container-card-2 {
         height: 190vh;
     }
@@ -999,7 +1001,7 @@ header {
        height: 250vh;
    }
    
-}
+} */
 
 
 .footer {
@@ -1346,7 +1348,7 @@ header {
     }
 
     .main-content {
-        padding: 74px 0;
+        padding: 64px 0;
     }
 
     .container-card .card {
@@ -1378,9 +1380,9 @@ header {
         width: 30%;
     }
 
-    .bg-black, .bg-black::before {
+    /* .bg-black, .bg-black::before {
         height: 70vh !important;
-    }
+    } */
     
     .bg-black .figure-2 {
         display: flex;
