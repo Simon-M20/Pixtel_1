@@ -145,7 +145,7 @@
 
 @media screen and (min-width: 1024px) {
     .cloud .article-cloud, .cloud .article-tienda {
-        padding: 32px 0;
+        padding: 42px 0;
     }
 
     .cloud .article-tienda figure {
@@ -163,8 +163,15 @@
     }
 
     .cloud .article-cloud figure figcaption {
-        width: 50%;
+        width: 55%;
         padding: 10px 15px;
+    }
+
+    .cloud .article-cloud figure img {
+        width: 35%;
+        height: auto;
+        padding: 20px;
+
     }
 
     
