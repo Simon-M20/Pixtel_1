@@ -765,13 +765,13 @@ header {
 
 .section-2 {
     width: 100%;
-    height: 110vh;
+    height: 100%;
     position: relative;
 }
 
 .bg-black {
     width: 100%;
-    height: 100%;
+    height: 110vh;
     padding: 64px 0;
     position: relative;
     background-repeat: no-repeat;
@@ -1465,15 +1465,7 @@ header {
     .call .btn-hover {
         width: 30%;
     }
-
-    /* .bg-black, .bg-black::before {
-        height: 70vh !important;
-    } */
-
-    .section-2 {
-        height: 100vh;
-    }
-    
+      
     .bg-black .figure-2 {
         display: flex;
         flex-direction: row;
